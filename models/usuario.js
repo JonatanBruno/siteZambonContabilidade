@@ -6,6 +6,9 @@ const usuario = db.sequelize.define('usuario' ,{
     },
     senha:{
         type:db.Sequelize.STRING
+    },
+    email:{
+        type:db.Sequelize.STRING
     }
 
 })
