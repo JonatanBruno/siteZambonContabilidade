@@ -3,39 +3,93 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
 
-    <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <title>Zambon Contabilidade</title>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="static/estilo.css"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="static/estilo.css"
 
 </head>
 
 <body>
 
-     <div class="container-fluid" style="background-color: rgb(253, 253, 253); text-align: center; " >
+  <div class="container-fluid" style="background-color: rgb(253, 253, 253); text-align: center; ">
     <div class="row">
-      <div class="col-md-12" style="text-align: left; height: 3vh; margin-top: 5px;" >Rua Itália, 169, Sala 04, Centro, Erechim - RS E-mail: contato@zamboncontabilidade.com.br </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-8" style="text-align: left; height: 3vh; margin-top: 5px;" >Rua Itália, 169, Sala 04, Centro, Erechim - RS E-mail: contato@zamboncontabilidade.com.br </div>
+      <div class="col-md-2"></div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-md-12" style="background-color: #4a7fc5; height: 10vh;"> </div>
+
+  <div class="row"  style="background-color: #f8f6f6; height: 17vh ">
+    <div class="col-md-3"></div>
+    <div class="col-md-4 "><img src='static/cartaoSite.png' width='400' height='100' "></div>
+
+    <div class="col-md-2"></div>
+
   </div>
-  <div class="row" style="background-color: white; height: 7vh; margin-left: 2vh;">
-    <div class="col-md-1">Inicio</div>
-    <div class="col-md-1">Soluções</div>
-    <div class="col-md-1">Contato</div>
-    <div class="col-md-1">Conteúdos</div>
-    <div class="col-md-1">Área do Cliente</div>
-    <div class="col-md-1">Sistema Web</div>
+
+  <div class="row" style="background-color: white height: 7vh;">"
+
+    <div class="col-md-2"></div>
+
+    <!-- Menu Inicio -->
+    <div class="dropdown">
+      <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Inicio
+      </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <a href="missao"><button class="dropdown-item" type="button">Missão</button></a>
+        <a href="valores"><button class="dropdown-item" type="button">Valores</button></a>
+      </div>
+    </div>
+
+    <!-- Menu Soluções-->
+    <div class="dropdown">
+      <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Soluções
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <a href="abertura-de-empresa"><button class="dropdown-item" type="button">Abertura de empresa</button></a>
+        <a href="folha-de-pagamento-e-declaracoes"><button class="dropdown-item" type="button">Folha de pagamento e declarações</button></a>
+        <a href="apuracao-de-impostos-mensais-e-declaracoes"><button class="dropdown-item" type="button">Apuração de impostos mensais e declarações</button></a>
+        <a href="contabilidade-societaria"><button class="dropdown-item" type="button">Contabilidade societária</button></a>
+        <a href="contabilidade-consultiva"><button class="dropdown-item" type="button">Contabilidade consultiva</button></a>
+      </div>
+    </div>
+
+    <!-- Menu Contato -->
+    <a href="formulario"><button  class="btn btn-white"> Contato </button></a>
+      
+
+    <!-- Menu Conteúdo -->
+    <div class="dropdown">
+      <button class="btn btn-white dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Conteúdo
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item" type="button">Cálculo Ponto de Equilíbrio</button>
+      </div>
+    </div>
+
+    <!-- Menu Area do cliente -->
+    <a href="https://m.dominioatendimento.com/login.html"><button  class="btn btn-white">  Área do Cliente</button></a>
+
+    <!-- Menu Sistema Web -->
+    <a href="https://www.dominioweb.com.br/"><button  class="btn btn-white">  Área do Cliente</button></a>
+
+    <div class="col-md-2"></div>
+
+  </div>
 
     {{{body}}}
 
