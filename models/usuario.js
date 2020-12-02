@@ -1,16 +1,15 @@
 const db = require('./db')
 
 const usuario = db.sequelize.define('usuario' ,{
-    nome:{
+    text:{
         type:db.Sequelize.STRING
     },
-    senha:{
+    password:{
         type:db.Sequelize.STRING
     },
     email:{
         type:db.Sequelize.STRING
     }
-
 })
 
 //Cria tabela= somente uma vez

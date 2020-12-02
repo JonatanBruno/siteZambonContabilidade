@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 
 const sequelize = new Sequelize('zambonContabilidade', 'root','',{ 
-    host:'localhost:8080',
+    host:'localhost',
     dialect:'mysql'
 })
 
