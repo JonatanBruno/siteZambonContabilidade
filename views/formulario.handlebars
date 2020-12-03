@@ -1,19 +1,59 @@
 <div class="container">
 
+    <br>
+
+    <h1>Cadastro Usuário</h1>
+
+    <br>
+
+    <form action="/cadUsuario" method="POST">
+
+        <input type="text" name="text" placeholder="informe o nome"/><br><br>
+        
+        <input type="email" name="email" placeholder="informe o e-mail"/><br><br>
+
+        <input type="password" name="password" placeholder="informe a senha"/><br><br>
+
+        <input type="submit" name="conectar">
+
+    </form>
+
+</div>
+
 <br>
 
-<h1>Cadastro Usuário</h1>
+<div class="container">
 
-<form action="/cadUsuario" method="POST">
+<table class="table">
 
-    <input type="text" name="text" placeholder="informe o nome"/><br><br>
+    <tr>
+
+        <th>Nome</th>
+
+        <th>Senha</th>
+
+        <th>Atualizar</th>
+
+        <th>Excluir</th>
+
+    </tr>
+
+    {{#each doador}}
+
+        <tr>
+
+            <td>{{Nome}}</td>
+
+            <td>{{Senha}}</td>
+
+            <td><a href="#">Modificar</a></td>
+
+            <td><a href="#">Apagar</a></td>
+
+        </tr>
     
-    <input type="email" name="email" placeholder="informe o e-mail"/><br><br>
+    {{/each}}
 
-    <input type="password" name="password" placeholder="informe a senha"/><br><br>
-
-    <input type="submit" name="conectar">
-
-</form>
+</table>
 
 </div>

@@ -32,6 +32,8 @@ app.post('/cadUsuario', function(req,res){
 })
 
 
+//Rotas para o navegador
+
 app.get('/formulario', function(req,res){
     res.render('formulario')
 })
@@ -78,6 +80,8 @@ app.get('/sistema-web', function(req,res){
     res.render('sistema-web')
 })
 
-app.get('/contato', function(req,res){
-    res.render('formulario')
+app.get('/login/meulogin', function(req,res){
+    usuario.findAll().then(function(doadores){
+        res.render('formulario', {doador: doadores.map(pagamento => pagamento.toJSON())})
+    })
 })
