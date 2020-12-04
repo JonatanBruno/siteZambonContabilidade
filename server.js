@@ -27,7 +27,7 @@ app.post('/cadUsuario', function(req,res){
     }).then(function(){
         res.send('Cadastrado com Sucesso')
     }).catch(function(erro){
-        res.send('Erro '+erro)
+        res.render('formulario')
     })
 })
 
