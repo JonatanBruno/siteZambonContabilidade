@@ -16,8 +16,18 @@ app.use(bodyParser.json())
 
 app.use('/static', express.static(__dirname + '/public'));
 
-//RESPONSAVEL PELA PORTA
-app.listen(3000);
+app.get('/delete/:id', function(req,res){
+    usuario.destroy({
+        where:{'id': req.params.id}
+    }).then(function(){
+        usuario.findAll().then(function(doadores){
+            res.render('formulario', {doador: doadores.map(pagamento => pagamento.toJSON())})
+        })
+
+    .catch(function(){res.send("não deu certo")})
+    })
+})
+
 
 //esse bloco é disparado pelo enviar do formulario
 app.post('/cadUsuario', function(req,res){
@@ -105,3 +115,6 @@ app.get('/area-restrita-do-cliente', function(req,res){
 app.get('/sistema-web', function(req,res){
     res.render('sistema-web')
 })
+
+//RESPONSAVEL PELA PORTA
+app.listen(3000);
