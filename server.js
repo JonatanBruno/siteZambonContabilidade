@@ -29,6 +29,29 @@ app.get('/delete/:id', function(req,res){
 })
 
 
+
+app.get('/update/:id', function(req,res){
+    usuario.findAll({where:{'id': req.params.id}}).then(function(doadores){
+        res.render('atualiza', {doador: doadores.map(pagamento => pagamento.toJSON())})
+    })
+})
+
+
+
+app.post('/updateUsuario', function(req,res){
+    usuario.update({Nome:req,body.nome,senha:req.body.senha},{
+        where:{id:req.body.codigo}
+    }).then(function(){
+        usuario.findAll().then(function(doadores){
+            res.render('formulario', {doador: doadores.map(pagamento => pagamento.toJSON())})
+        })
+    }).catch(function(erro){
+        res.send("erro"+erro)
+    })
+})
+
+
+
 //esse bloco é disparado pelo enviar do formulario
 app.post('/cadUsuario', function(req,res){
     usuario.create({
