@@ -32,14 +32,14 @@ app.get('/delete/:id', function(req,res){
 
 app.get('/update/:id', function(req,res){
     usuario.findAll({where:{'id': req.params.id}}).then(function(doadores){
-        res.render('atualiza', {doador: doadores.map(pagamento => pagamento.toJSON())})
+        res.render('atualizacaoFormulario', {doador: doadores.map(pagamento => pagamento.toJSON())})
     })
 })
 
 
 
 app.post('/updateUsuario', function(req,res){
-    usuario.update({Nome:req,body.nome,senha:req.body.senha},{
+    usuario.update({text:req.body.nome,password:req.body.senha},{
         where:{id:req.body.codigo}
     }).then(function(){
         usuario.findAll().then(function(doadores){
@@ -49,7 +49,6 @@ app.post('/updateUsuario', function(req,res){
         res.send("erro"+erro)
     })
 })
-
 
 
 //esse bloco é disparado pelo enviar do formulario
@@ -139,5 +138,12 @@ app.get('/sistema-web', function(req,res){
     res.render('sistema-web')
 })
 
+//---------------------------------------------------------------
+
+app.get('/calculo-ponto-de-equilibrio', function(req,res){
+    res.render('calculo-ponto-de-equilibrio')
+})
+
+//----------------------------------------------------------------
 //RESPONSAVEL PELA PORTA
 app.listen(3000);
